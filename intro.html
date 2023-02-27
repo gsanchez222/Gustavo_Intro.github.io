@@ -2,9 +2,55 @@
 <html>
   <head>
     <title>Gustavo: Welcome </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <h1>Hello</h1>
-    <p>Welcome to my GitHub Pages site!</p>
-  </body>
+
+    <div class="content">
+        <h1>Hello Professor</h1>
+        <p>Attached is my image from my GitHub Page site!</p>
+        <p>I am from Chicago so I added a weather API and uploaded a picture of my city </p>
+        
+        <dl>
+            <dt>Next Steps:</dt>
+            <dd>- One of the things I would like to do next time is produce graphs or format stock prices of certain Indexes</dd>
+        </dl>
+        
+        
+    </body>
+    <script>
+       //this is where I would like to add the API we will see
+    </script>
+<!-- the DIV that will contain the widget -->
+<div class="weatherWidget" ></div>
+
+<script>
+   window.weatherWidgetConfig =  window.weatherWidgetConfig || [];
+   window.weatherWidgetConfig.push({
+       selector:".weatherWidget",
+       apiKey:"YMVQG5TUHQ3G3SQDLQBYAP4ZM", //Sign up for your personal key
+       location:"Chicago, IL", //Enter an address
+       unitGroup:"us", //"us" or "metric"
+       forecastDays:5, //how many days forecast to show
+       title:"Chicago,IL Weather", //optional title to show in the 
+       showTitle:true, 
+       showConditions:true
+       });
+  
+   (function() {
+   var d = document, s = d.createElement('script');
+   s.src = 'https://www.visualcrossing.com/widgets/forecast-simple/weather-forecast-widget-simple.js';
+   s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+   
+   })();
+</script>
+
+
+</div>
+
+<div class="img">
+<p><img src="chicago-il.jpeg" alt="Chicago" class="img"></p>
+
+</div>
 </html>
